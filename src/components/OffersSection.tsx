@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
     return (
-        <section className="mt-20 mb-20 w-full bg-white">
+        <section className="mt-20 mb-32 w-full bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Левая колонка — статичная */}
                 <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">

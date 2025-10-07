@@ -27,7 +27,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section className="flex justify-center mt-32 px-4">
+        <section className="flex justify-center mb-36 mt-32 px-4">
             <div className="w-full max-w-[1600px]">
                 {/* Заголовок */}
                 <div className="text-center mb-12">
