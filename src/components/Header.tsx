@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     const accentColor = "#B49C6C"; // золотой
 
     return (
-        <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[1400px] bg-white/40 backdrop-blur-md rounded-3xl z-50 border border-gray-200">
+        <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[1400px] bg-white/40 backdrop-blur-md rounded-3xl z-50 border border-gray-200">
             <div className="flex items-center justify-between px-6 py-3 ">
                 {/* Логотип */}
                 <Link href="/">
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                 </Link>
 
                 {/* Меню для ПК */}
-                <nav className="hidden md:flex items-center space-x-8 font-semibold text-gray-700">
+                <nav className="hidden md:flex items-center space-x-8 text-xl text-gray-700">
                     {menuItems.map((item, idx) => (
                         <Link key={idx} href={item.href}>
               <span className="relative group px-1 py-1 cursor-pointer hover:text-[#B49C6C] transition">
