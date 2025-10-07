@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function RepairHero() {
     return (
         <section className="relative flex justify-center my-28 px-4">
-            <div className="relative w-full max-w-[1400px] h-[80vh] min-h-[500px] rounded-3xl rounded-br-none overflow-hidden">
+            <div className="relative w-full max-w-[1600px] h-[80vh] min-h-[500px] rounded-3xl rounded-br-none overflow-hidden">
 
                 {/* Фото-фон */}
                 <Image

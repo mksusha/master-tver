@@ -3,7 +3,7 @@
 export default function MapSection() {
     return (
         <section className="mt-20 mb-20 w-full">
-            <div className="w-full max-w-[1400px] mx-auto px-4">
+            <div className="w-full max-w-[1600px] mx-auto px-4">
 
 
                 <div className="relative overflow-hidden rounded-2xl" style={{ paddingTop: "56.25%" }}>
