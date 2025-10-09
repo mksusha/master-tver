@@ -18,15 +18,15 @@ const Header: React.FC = () => {
 
     return (
         <header className="fixed top-4 left-0 w-full z-50">
-            <div className="mx-auto max-w-[1600px] px-4">
+            <div className="mx-auto max-w-[1600px] px-4 md:px-8">
                 <div className="bg-white/40 backdrop-blur-md border border-gray-200 rounded-3xl">
-                    <div className="flex items-center justify-between px-6 py-3">
+                    <div className="flex items-center justify-between px-6 py-2">
                         {/* Логотип */}
                         <Link href="/">
                             <img
                                 src="/logo_sc1.png"
                                 alt="Логотип"
-                                className="h-10 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                                className="md:h-10 h-8 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                             />
                         </Link>
 

@@ -3,6 +3,10 @@ import RepairHero from "@/components/RepairHero";
 import ServicesSection from "@/components/ServicesSection";
 import OffersSection from "@/components/OffersSection";
 import MapSection from "@/components/MapSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQSection";
+import ReviewsSection from "@/components/ReviewsSection";
 
 export default function Home() {
     return (
@@ -11,7 +15,12 @@ export default function Home() {
             <RepairHero />
             <ServicesSection />
             <OffersSection></OffersSection>
+            <ReviewsSection></ReviewsSection>
            <MapSection/>
+
+            <FAQSection/>
+            <ContactSection/>
+            <Footer></Footer>
 
         </>
     );
