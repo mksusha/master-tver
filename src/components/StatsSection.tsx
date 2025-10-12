@@ -49,7 +49,7 @@ export default function StatsSection() {
             className="relative mt-32 mb-32 px-4 md:px-8 flex justify-center"
         >
             <div className="relative w-full max-w-[1600px] overflow-hidden rounded-3xl  text-white ">
-                {/* Фон */}
+
                 <div className="absolute  inset-0">
                     <Image
                         src="/stats.jpg"

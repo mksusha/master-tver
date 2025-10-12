@@ -9,7 +9,7 @@ export default function RepairHero() {
 
                 {/* Фото-фон */}
                 <Image
-                    src="/disign2.jpg"
+                    src="/proj1.jpg"
                     alt="Ремонт премиум-класса"
                     fill
                     priority
@@ -19,13 +19,14 @@ export default function RepairHero() {
 
                 {/* Текст */}
                 <div className="absolute top-16 left-4 md:top-24 md:left-16 text-white z-10">
-                    <h1 className="text-2xl sm:text-3xl md:text-7xl  leading-tight max-w-[300px] sm:max-w-[400px] md:max-w-[600px]">
-                        Ремонт <br /> премиум-класса
+                    <h1 className="text-2xl sm:text-3xl md:text-7xl leading-tight max-w-[300px] sm:max-w-[400px] md:max-w-[600px]">
+                        Реализуем <br /> дизайн-проекты интерьера <br /> в Твери
                     </h1>
-                    <p className="mt-2 sm:mt-4 text-sm sm:text-3xl  max-w-[350px] sm:max-w-[500px]  text-white/90">
-                        Полный цикл работ: дизайн-проект, ремонт, надзор и комплектация
+                    <p className="mt-2 sm:mt-4 text-sm sm:text-3xl max-w-[350px] sm:max-w-[500px] text-white/90">
+                        Комплексная реализация: дизайн, ремонт, авторский надзор и комплектация объекта
                     </p>
                 </div>
+
 
                 {/* Кнопка с SVG под ней */}
                 <div className="absolute bottom-0 right-0 flex flex-col items-center z-10">

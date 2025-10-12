@@ -9,6 +9,7 @@ import FAQSection from "@/components/FAQSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import TariffsSection from "@/components/TariffsSection";
 import StatsSection from "@/components/StatsSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
     return (
@@ -19,8 +20,10 @@ export default function Home() {
             <OffersSection></OffersSection>
             <ReviewsSection></ReviewsSection>
 
+            <ProjectsSection></ProjectsSection>
 
             <TariffsSection></TariffsSection>
+
             <StatsSection></StatsSection>
            <MapSection/>
 
