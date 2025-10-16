@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import ModalContact from "@/components/ModalContact"; // путь поправь под структуру проекта
+import ModalContact from "@/components/ModalContact";
 
 export default function RepairHero() {
     const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function RepairHero() {
         >
             <div className="relative w-full max-w-[1600px] h-[42vw] max-h-[790px] min-h-[500px] md:min-h-[700px] rounded-3xl rounded-br-none overflow-hidden">
 
-                {/* Фото-фон */}
+                {/* Фото-фон с LCP */}
                 <Image
                     src="/proj1.jpg"
                     alt="Дизайн-проект интерьера премиум-класса в Твери"
@@ -50,9 +50,9 @@ export default function RepairHero() {
                     <button
                         onClick={() => setOpen(true)}
                         className="px-4 sm:px-5 py-3 sm:py-4 mb-1 text-base sm:text-lg md:text-2xl font-medium text-white
-                       bg-gradient-to-r from-[#B49C6C] to-[#ccb689]
-                       hover:opacity-90 transition-all duration-300
-                       rounded-2xl"
+                      bg-gradient-to-r from-[#B49C6C] to-[#ccb689]
+                      hover:opacity-90 transition-all duration-300
+                      rounded-2xl"
                         aria-label="Связаться с компанией"
                     >
                         Связаться с нами
@@ -60,7 +60,7 @@ export default function RepairHero() {
                 </div>
             </div>
 
-            {/* Подключаем модалку */}
+            {/* Модалка */}
             <ModalContact open={open} onClose={() => setOpen(false)} />
         </section>
     );

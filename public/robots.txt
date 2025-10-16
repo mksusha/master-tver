@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://master-tver.vercel.app
+
+# Sitemaps
+Sitemap: https://master-tver.vercel.app/sitemap.xml

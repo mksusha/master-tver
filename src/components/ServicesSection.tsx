@@ -60,9 +60,9 @@ export default function ServicesSection() {
                             {/* Левая часть — текст */}
                             <div className="flex flex-col justify-center bg-[#f8f8f8] p-6 sm:p-8 w-full sm:w-1/2">
                                 <h3 className="text-xl md:text-3xl mb-3">{service.title}</h3>
-                                <p className="text-gray-700 text-sm md:text-base mb-8">
+                                <h4 className="text-gray-700 text-sm md:text-base mb-8">
                                     {service.description}
-                                </p>
+                                </h4>
 
                                 {/* Элегантная кнопка */}
                                 <Link

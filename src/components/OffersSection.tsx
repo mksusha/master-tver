@@ -53,12 +53,12 @@ export default function Features() {
                                 {feature.number}
                             </div>
                             <div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
+                                <h4 className="text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
                                     {feature.title}
-                                </h3>
-                                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                                </h4>
+                                <h5 className="text-sm sm:text-base text-gray-700 leading-relaxed">
                                     {feature.text}
-                                </p>
+                                </h5>
                             </div>
                         </div>
                     ))}
