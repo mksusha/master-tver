@@ -36,10 +36,10 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section className="flex justify-center mb-36 mt-8 md:mt-36 px-4 md:px-8">
+        <section aria-label="Основные услуги компании" className="flex justify-center mb-36 mt-8 md:mt-36 px-4 md:px-8">
             <div className="w-full max-w-[1600px]">
                 {/* Заголовок */}
-                <div className="text-center mb-12">
+                <header className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-medium text-[#B49C6C] mb-5">
                         Наши основные услуги
                     </h2>
@@ -48,14 +48,14 @@ export default function ServicesSection() {
                         Индивидуальный подход, точное исполнение и безупречное качество —
                         основа нашей работы.
                     </p>
-                </div>
+                </header>
 
                 {/* Карточки */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {services.map((service, index) => (
-                        <div
+                        <article
                             key={index}
-                            className="flex flex-col sm:flex-row rounded-3xl overflow-hidden bg-white "
+                            className="flex flex-col sm:flex-row rounded-3xl overflow-hidden bg-white"
                         >
                             {/* Левая часть — текст */}
                             <div className="flex flex-col justify-center bg-[#f8f8f8] p-6 sm:p-8 w-full sm:w-1/2">
@@ -67,7 +67,8 @@ export default function ServicesSection() {
                                 {/* Элегантная кнопка */}
                                 <Link
                                     href={service.link}
-                                    className="group inline-flex items-center gap-2 w-fit px-6 py-2 border border-[#B49C6C] text-[#B49C6C] rounded-full transition-all duration-300 hover:bg-[#B49C6C] hover:text-white"
+                                    className="group inline-flex items-center gap-2 w-fit px-4 py-2 sm:px-6 sm:py-2 border border-[#B49C6C] text-[#B49C6C] rounded-full text-sm sm:text-base transition-all duration-300 hover:bg-[#B49C6C] hover:text-white"
+                                    aria-label={`Подробнее об услуге ${service.title}`}
                                 >
                                     Подробнее
                                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -80,14 +81,14 @@ export default function ServicesSection() {
                             <div className="relative w-full sm:w-1/2 h-[290px] sm:h-auto min-h-[290px]">
                                 <Image
                                     src={service.image}
-                                    alt={service.title}
+                                    alt={`Пример работы: ${service.title}`}
                                     fill
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     priority={index < 2}
                                 />
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

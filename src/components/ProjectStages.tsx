@@ -74,7 +74,7 @@ const ProjectStages: React.FC = () => {
                             className="rounded-4xl overflow-hidden bg-secondary shadow-sm"
                         >
                             {/* Верхняя часть */}
-                            <div className="bg-[#B49C6C]  text-white px-6 py-8 rounded-t-4xl">
+                            <div className="bg-brand  text-white px-6 py-8 rounded-t-4xl">
                                 <p className="text-4xl uppercase tracking-wider opacity-90">{stage.number}</p>
                                 <p className="text-lg mt-2 opacity-90">{stage.duration}</p>
                             </div>

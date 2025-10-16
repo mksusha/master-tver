@@ -1,32 +1,84 @@
 "use client";
 
+import { useState } from "react";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { SiTelegram } from "react-icons/si";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+    const [servicesOpen, setServicesOpen] = useState(false);
+
+    const services = [
+        { title: "Дизайн интерьера", link: "/design" },
+        { title: "Комплексный ремонт", link: "/renovation" },
+        { title: "Авторский надзор", link: "/supervision" },
+        { title: "Комплектация объекта", link: "/furnishing" },
+    ];
+
     return (
         <footer className="mt-24 px-4 md:px-8">
             <div className="max-w-[1600px] mx-auto bg-secondary rounded-t-3xl shadow-sm overflow-hidden">
                 {/* Верхняя часть футера */}
-                <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-6 border-b border-gray-200">
+                <div className="flex flex-col items-center md:flex-row md:justify-between px-6 md:px-12 py-6 border-b border-gray-200">
                     {/* Логотип */}
-                    <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-4 md:mb-0">
+                    <div className="flex items-center justify-center w-full md:w-auto mb-4 md:mb-0">
                         <img
                             src="/logo_sc1.png"
-                            alt="Логотип"
+                            alt="Гермес — ремонт и дизайн интерьера в Твери"
                             className="h-10 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                         />
                     </div>
 
                     {/* Навигация */}
-                    <nav className="flex flex-wrap justify-center gap-6 text-base md:text-lg font-medium text-gray-700">
-                        <Link href="/projects" className="hover:text-[#B49C6C] transition">
-                            Проекты
-                        </Link>
-                        <Link href="/services" className="hover:text-[#B49C6C] transition">
-                            Услуги
-                        </Link>
+                    <nav className="flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-6 text-base md:text-lg font-medium text-gray-700 w-full md:w-auto">
+                        {/* Десктоп - услуги с ховером */}
+                        <div className="relative group hidden md:inline-block cursor-pointer">
+                            <span className="flex items-center gap-1 hover:text-[#B49C6C] transition">
+                                Услуги <ChevronDown size={16} />
+                            </span>
+                            <div className="absolute top-full left-0 mt-2 bg-white rounded-3xl shadow-2xl py-4 px-4 flex flex-col gap-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                {services.map((srv, i) => (
+                                    <Link
+                                        key={i}
+                                        href={srv.link}
+                                        className="text-gray-700 hover:text-[#B49C6C] transition text-base"
+                                    >
+                                        {srv.title}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Мобильные - услуги с кликом */}
+                        <div className="md:hidden w-full flex flex-col items-center">
+                            <button
+                                onClick={() => setServicesOpen(!servicesOpen)}
+                                className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-xl hover:bg-white/20 transition text-gray-700 font-medium"
+                            >
+                                Услуги
+                                {servicesOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                            </button>
+                            <div
+                                className={`overflow-hidden transition-all duration-300 ${
+                                    servicesOpen ? "max-h-60 mt-2" : "max-h-0"
+                                }`}
+                            >
+                                <div className="flex flex-col gap-2 px-4 items-center">
+                                    {services.map((srv, i) => (
+                                        <Link
+                                            key={i}
+                                            href={srv.link}
+                                            onClick={() => setServicesOpen(false)}
+                                            className="text-gray-700 hover:text-[#B49C6C] transition text-base"
+                                        >
+                                            {srv.title}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
                         <Link href="/contacts" className="hover:text-[#B49C6C] transition">
                             Контакты
                         </Link>
@@ -36,11 +88,12 @@ export default function Footer() {
                     </nav>
 
                     {/* Соцсети */}
-                    <div className="flex items-center justify-center md:justify-end gap-4 mt-4 md:mt-0">
+                    <div className="flex items-center justify-center gap-4 mt-4 md:mt-0">
                         <a
                             href="https://t.me/yourchannel"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Telegram канал Гермес"
                             className="text-[#B49C6C] hover:text-black transition text-3xl"
                         >
                             <SiTelegram />
@@ -49,6 +102,7 @@ export default function Footer() {
                             href="https://wa.me/79991508400"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="WhatsApp Гермес"
                             className="text-[#B49C6C] hover:text-black transition text-3xl"
                         >
                             <AiOutlineWhatsApp />

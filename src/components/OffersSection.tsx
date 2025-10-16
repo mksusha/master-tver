@@ -28,16 +28,16 @@ export default function Features() {
         <section className="mt-20 mb-32 w-full bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Левая колонка — статичная */}
-                <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
+                <div className="md:sticky md:top-24 py-5 space-y-5 self-start">
                     <p className="uppercase text-2xl tracking-widest text-[#B49C6C]">
                         Мы предлагаем
                     </p>
 
-                    <h2 className="text-3xl md:text-4xl leading-tight text-gray-900">
+                    <h2 className="text-3xl sm:text-4xl leading-tight text-gray-900">
                         Ремонт и дизайн <br /> премиум-класса
                     </h2>
 
-                    <p className="text-lg md:text-xl text-gray-800 leading-relaxed max-w-[500px]">
+                    <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed max-w-full md:max-w-[500px]">
                         Комплексная работа с интерьером: от идеи и дизайн-проекта до полной реализации. В каждом проекте внимание к деталям и индивидуальный подход к клиенту.
                     </p>
                 </div>
@@ -47,16 +47,16 @@ export default function Features() {
                     {features.map((feature, idx) => (
                         <div
                             key={idx}
-                            className="rounded-3xl bg-[#f8f8f8] p-8 flex items-start gap-6 hover:shadow-md transition-shadow duration-300"
+                            className="rounded-3xl bg-[#f8f8f8] p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 hover:shadow-md transition-shadow duration-300"
                         >
-                            <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[#B49C6C] flex items-center justify-center text-white text-xl font-medium">
+                            <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#B49C6C] flex items-center justify-center text-white text-lg sm:text-xl font-medium">
                                 {feature.number}
                             </div>
                             <div>
-                                <h3 className="text-xl md:text-2xl  mb-2">
+                                <h3 className="text-lg sm:text-xl md:text-2xl mb-1 sm:mb-2">
                                     {feature.title}
                                 </h3>
-                                <p className="text-gray-700 text-base leading-relaxed">
+                                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                                     {feature.text}
                                 </p>
                             </div>

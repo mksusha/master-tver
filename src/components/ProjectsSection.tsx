@@ -3,19 +3,22 @@
 import Image from "next/image";
 
 const projects = [
-    { src: "/proj1.jpg", alt: "Ремонт квартиры премиум-класса" },
-    { src: "/proj2.jpg", alt: "Дизайн интерьера гостиной" },
-    { src: "/proj3.jpg", alt: "Дизайн кухни в современном стиле" },
-    { src: "/proj4.jpg", alt: "Ремонт ванной комнаты премиум" },
-    { src: "/proj5.jpg", alt: "Спальня с авторским дизайном" },
-    { src: "/proj6.jpg", alt: "Детская комната с интерьером" },
-    { src: "/proj7.jpg", alt: "Рабочий кабинет премиум-класса" },
-    { src: "/proj8.jpg", alt: "Гостиная с индивидуальным дизайном" },
+    { src: "/proj1.jpg", alt: "Пример интерьера: Ремонт квартиры премиум-класса" },
+    { src: "/proj2.jpg", alt: "Пример интерьера: Дизайн интерьера гостиной" },
+    { src: "/proj3.jpg", alt: "Пример интерьера: Дизайн кухни в современном стиле" },
+    { src: "/proj4.jpg", alt: "Пример интерьера: Ремонт ванной комнаты премиум" },
+    { src: "/proj5.jpg", alt: "Пример интерьера: Спальня с авторским дизайном" },
+    { src: "/proj6.jpg", alt: "Пример интерьера: Детская комната с интерьером" },
+    { src: "/proj7.jpg", alt: "Пример интерьера: Рабочий кабинет премиум-класса" },
+    { src: "/proj8.jpg", alt: "Пример интерьера: Гостиная с индивидуальным дизайном" },
 ];
 
 export default function ProjectsSection() {
     return (
-        <section className="mt-32 mb-32 w-full bg-white">
+        <section
+            aria-label="Наши проекты"
+            className="mt-32 mb-32 w-full bg-white"
+        >
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Левая колонка — заголовок */}
                 <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
@@ -37,7 +40,7 @@ export default function ProjectsSection() {
                 {/* Правая колонка — галерея */}
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                     {projects.map((project, idx) => (
-                        <div
+                        <article
                             key={idx}
                             className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
                         >
@@ -51,7 +54,7 @@ export default function ProjectsSection() {
                                 placeholder="blur"
                                 blurDataURL="/blur-placeholder.jpg"
                             />
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

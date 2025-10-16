@@ -11,26 +11,34 @@ import TariffsSection from "@/components/TariffsSection";
 import StatsSection from "@/components/StatsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 
+import SEO from "@/components/SEO";
+import Script from "next/script";
+
 export default function Home() {
     return (
         <>
+            {/* SEO и мета-теги */}
+            <SEO
+                title="Ремонт квартир в Твери — Гермес"
+                description="Качественный ремонт под ключ в Твери. Дизайн интерьера, комплексный ремонт, авторский надзор."
+                url="https://master-tver.vercel.app/"
+                image="https://master-tver.vercel.app/proj1.jpg"
+            />
+
+
+            {/* Основные секции страницы */}
             <Header />
             <RepairHero />
             <ServicesSection />
-            <OffersSection></OffersSection>
-            <ReviewsSection></ReviewsSection>
-
-            <ProjectsSection></ProjectsSection>
-
-            <TariffsSection></TariffsSection>
-
-            <StatsSection></StatsSection>
-           <MapSection/>
-
-            <FAQSection/>
-            <ContactSection/>
-            <Footer></Footer>
-
+            <OffersSection />
+            <ReviewsSection />
+            <ProjectsSection />
+            <TariffsSection />
+            <StatsSection />
+            <MapSection />
+            <FAQSection />
+            <ContactSection />
+            <Footer />
         </>
     );
 }
