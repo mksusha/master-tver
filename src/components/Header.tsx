@@ -34,7 +34,7 @@ const Header: React.FC = () => {
                                 alt="Гермес — ремонт и дизайн интерьера в Твери"
                                 width={120}
                                 height={40}
-                                className="md:h-10 h-8 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
+                                className="md:h-12 h-8 w-auto cursor-pointer transition-transform duration-300 hover:scale-105"
                                 priority
                             />
                         </Link>

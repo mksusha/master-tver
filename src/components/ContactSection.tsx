@@ -49,7 +49,7 @@ export default function ContactSection() {
                 {/* Левая часть — фото */}
                 <div className="relative h-[400px] md:h-auto">
                     <Image
-                        src="/disign2.jpg"
+                        src="/first-blok19.jpg"
                         alt="Офис компании Гермес"
                         fill
                         priority

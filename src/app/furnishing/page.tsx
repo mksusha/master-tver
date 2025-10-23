@@ -53,7 +53,7 @@ export default function EquipmentPage() {
             <ServiceHero
                 title="Комплектация объекта"
                 description="Подбираем и поставляем мебель, освещение, сантехнику и декор — создаём готовое пространство под ключ."
-                image="/stats1.jpg"
+                image="/stats.jpg"
             />
             <FurnishingProcess />
             <CompletionSection />

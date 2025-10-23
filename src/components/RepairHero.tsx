@@ -16,7 +16,7 @@ export default function RepairHero() {
 
                 {/* Фото-фон с LCP */}
                 <Image
-                    src="/proj1.jpg"
+                    src="/first-blok.jpg"
                     alt="Дизайн-проект интерьера премиум-класса в Твери"
                     fill
                     priority

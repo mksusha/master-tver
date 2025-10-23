@@ -12,6 +12,7 @@ import TariffsSection from "@/components/TariffsSection";
 import StatsSection from "@/components/StatsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import type { Metadata } from "next";
+import RepairQuiz from "@/components/RepairQuiz";
 
 // SEO для страницы
 export const metadata: Metadata = {
@@ -46,6 +47,7 @@ export default function Home() {
                     <RepairHero />
                     <ServicesSection />
                     <OffersSection />
+                <RepairQuiz></RepairQuiz>
                     <ReviewsSection />
                     <ProjectsSection />
                     <TariffsSection />

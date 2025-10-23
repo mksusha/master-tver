@@ -54,7 +54,7 @@ export default function DesignPage() {
             <ServiceHero
                 title="Дизайн интерьера"
                 description="Разрабатываем стильные и функциональные интерьеры, отражающие ваш вкус и образ жизни."
-                image="/stats.jpg"
+                image="/first-blok9.jpg"
             />
             <DesignVideos />
             <DesignSteps />

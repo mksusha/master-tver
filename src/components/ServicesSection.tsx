@@ -7,28 +7,28 @@ export default function ServicesSection() {
     const services = [
         {
             title: "Дизайн интерьера",
-            image: "/ex1.webp",
+            image: "/first-blok7.jpg",
             description:
                 "Создаём уникальные дизайн-проекты с учётом стиля, комфорта и функциональности.",
             link: "/design",
         },
         {
             title: "Комплексный ремонт",
-            image: "/ex2.webp",
+            image: "/first-blok10.jpg",
             description:
                 "Полный цикл ремонтных работ — от черновых до финишной отделки.",
             link: "/renovation",
         },
         {
             title: "Авторский надзор",
-            image: "/ex3.webp",
+            image: "/first-blok1.jpg",
             description:
                 "Контроль за точным выполнением проекта, подбор материалов и мебели.",
             link: "/supervision",
         },
         {
             title: "Комплектация объекта",
-            image: "/ex4.webp",
+            image: "/first-blok11.jpg",
             description:
                 "Закупка, логистика и установка мебели, техники и декора.",
             link: "/furnishing",

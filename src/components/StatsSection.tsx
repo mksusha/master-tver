@@ -5,10 +5,9 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
 const stats = [
-    { number: 10, label: "лет опыта" },
-    { number: 120, label: "реализованных проектов" },
-    { number: 50, label: "довольных клиентов" },
-    { number: 25, label: "человек в команде" },
+    { number: 11, label: "лет опыта" },
+    { number: 737, label: "реализованных проектов" },
+    { number: 35, label: "человек в команде" },
 ];
 
 export default function AboutFirm() {
@@ -75,7 +74,7 @@ export default function AboutFirm() {
                     </div>
 
                     {/* Анимированные карточки */}
-                    <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 px-2 sm:px-5 py-10 md:py-20 z-10">
+                    <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-2 sm:px-5 py-10 md:py-20 z-10">
                         {stats.map((stat, i) => (
                             <article
                                 key={i}
