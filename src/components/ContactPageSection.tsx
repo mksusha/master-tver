@@ -44,40 +44,40 @@ export default function ContactPageSection() {
         <section className="mt-32 mb-20 flex justify-center px-4 md:px-8">
             <div className="w-full max-w-[1600px] grid grid-cols-1 md:grid-cols-2">
                 {/* Левая часть */}
-                <div className="flex flex-col justify-between bg-brand rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none p-6 sm:p-8 md:p-12 shadow-sm h-full text-center md:text-left">
+                <div className="flex flex-col justify-between bg-secondary rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none p-6 sm:p-8 md:p-12 shadow-sm h-full text-center md:text-left">
                     <div>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl text-white mb-5">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl text-black mb-5">
                             Контакты
                         </h2>
 
-                        <p className="text-white border rounded-3xl py-8 sm:py-12 px-4 bg-white/15 text-lg sm:text-xl md:text-2xl my-7">
+                        <p className="text-black border rounded-3xl py-8 sm:py-12 px-4 bg-white/15 text-lg sm:text-xl md:text-2xl my-7">
                             Приезжайте в наш офис — будем рады обсудить ваш проект лично. Мы
                             всегда вас поймем и предложим оптимальное решение.
                         </p>
 
-                        <p className="text-white text-lg md:text-xl mb-2">
+                        <p className="text-black text-lg md:text-xl mb-2">
                             Тверь, Спортивный переулок, 1А, корп. 1
                         </p>
-                        <p className="text-white text-base md:text-xl mb-4">
+                        <p className="text-black text-base md:text-xl mb-4">
                             Заезжайте в наш офис — будем рады обсудить ваш проект лично
                         </p>
 
                         {/* Контакты */}
                         <div className="flex flex-col items-center md:items-start gap-3 mb-6">
-                            <div className="flex items-center gap-3 text-white text-base md:text-lg">
-                                <Phone className="w-5 h-5 text-white" />
+                            <div className="flex items-center gap-3 text-black text-base md:text-lg">
+                                <Phone className="w-5 h-5 text-black" />
                                 <a
                                     href="tel:+79991508400"
-                                    className="hover:text-gray-200 transition"
+                                    className="hover:text-brand transition"
                                 >
                                     8 (999) 150-84-00
                                 </a>
                             </div>
-                            <div className="flex items-center gap-3 text-white text-base md:text-lg">
-                                <Mail className="w-5 h-5 text-white" />
+                            <div className="flex items-center gap-3 text-black  text-base md:text-lg">
+                                <Mail className="w-5 h-5 text-black" />
                                 <a
                                     href="mailto:germesprostroy@mail.ru"
-                                    className="hover:text-gray-200 transition"
+                                    className="hover:text-brand transition"
                                 >
                                     germesprostroy@mail.ru
                                 </a>
@@ -91,7 +91,7 @@ export default function ContactPageSection() {
                                     href="https://t.me/yourchannel"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-white hover:text-[#0088cc] transition-colors duration-300"
+                                    className="flex items-center gap-2 text-black hover:text-[#0088cc] transition-colors duration-300"
                                 >
                                     <SiTelegram className="w-6 h-6" />
                                     <span className="hidden sm:inline text-base">Telegram</span>
@@ -102,7 +102,7 @@ export default function ContactPageSection() {
                                     href="https://wa.me/yourphone"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-white hover:text-[#25D366] transition-colors duration-300"
+                                    className="flex items-center gap-2 text-black hover:text-[#25D366] transition-colors duration-300"
                                 >
                                     <AiOutlineWhatsApp className="w-6 h-6" />
                                     <span className="hidden sm:inline text-base">WhatsApp</span>
@@ -116,7 +116,7 @@ export default function ContactPageSection() {
                     {/* Форма */}
                     <div className="min-h-[58px] mt-4">
                         {success ? (
-                            <p className="text-center text-white text-base py-3 rounded-2xl border border-white bg-white/10">
+                            <p className="text-center text-black text-base py-3 rounded-2xl border border-white bg-white/10">
                                 Заявка отправлена, мы свяжемся с вами в ближайшее время
                             </p>
                         ) : (
@@ -131,7 +131,7 @@ export default function ContactPageSection() {
                                     value={form.name}
                                     onChange={handleChange}
                                     required
-                                    className="flex-1 px-4 py-3 rounded-2xl border border-white bg-white/10 text-white placeholder-white focus:ring-2 focus:ring-[#B49C6C] outline-none"
+                                    className="flex-1 px-4 py-3 rounded-2xl border border-black  text-black placeholder-black focus:ring-1 focus:ring-black outline-none"
                                 />
                                 <input
                                     type="tel"
@@ -140,12 +140,12 @@ export default function ContactPageSection() {
                                     value={form.phone}
                                     onChange={handleChange}
                                     required
-                                    className="flex-1 px-4 py-3 rounded-2xl border border-white bg-white/10 text-white placeholder-white focus:ring-2 focus:ring-[#B49C6C] outline-none"
+                                    className="flex-1 px-4 py-3 rounded-2xl border border-black text-black placeholder-black/50 focus:ring-1 focus:ring-black outline-none"
                                 />
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className={`px-6 py-3 rounded-2xl border border-white w-full md:w-[180px] transition-all duration-300 ${
+                                    className={`px-6 py-3 rounded-2xl border border-brand w-full md:w-[180px] transition-all duration-300 ${
                                         loading
                                             ? "bg-brand text-white opacity-80 cursor-default"
                                             : "bg-brand text-white hover:bg-white hover:text-[#B49C6C]"

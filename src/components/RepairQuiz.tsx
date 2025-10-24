@@ -13,8 +13,8 @@ interface Question {
 const questions: Question[] = [
     {
         question: "Ремонт какого объекта вас интересует?",
-        options: ["Новостройка", "Дом", "Вторичное жильё"],
-        imageOptions: ["/nov.jpg", "/dom.jpg", "/vtorichka.jpg"],
+        options: ["Новостройка", "Дом", "Вторичное жильё", "Коммерческая недвижимость"],
+        imageOptions: ["/vtorichka.jpg", "/dom.jpg", "/nov.jpg", "/font-blok23.jpg"],
     },
     {
         question: "Укажите общую площадь помещений, кв.м.",

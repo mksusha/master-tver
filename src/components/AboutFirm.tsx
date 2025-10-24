@@ -25,20 +25,20 @@ const AboutFirm: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div
                         className="bg-gray-50 rounded-3xl p-14 text-center md:text-left transition-all duration-300">
-                    <p className="text-[190px] leading-none font-light text-gray-900">15</p>
+                    <p className="text-[190px] leading-none font-light text-gray-900">11</p>
                         <p className="mt-4 text-gray-700 text-xl font-light">лет опыта</p>
                     </div>
 
                     <div
                         className="bg-gray-50 rounded-3xl p-14 text-center md:text-left htransition-all duration-300">
-                        <p className="text-[190px] leading-none font-light text-gray-900">120</p>
+                        <p className="text-[190px] leading-none font-light text-gray-900">737</p>
                         <p className="mt-4 text-gray-700 text-xl font-light">проектов</p>
                     </div>
 
                     <div
                         className="bg-gray-50 rounded-3xl p-14 text-center md:text-left transition-all duration-300">
-                        <p className="text-[190px] leading-none font-light text-gray-900">275.</p>
-                        <p className="mt-4 text-gray-700 text-xl font-light">275000 м² выполненных объектов</p>
+                        <p className="text-[190px] leading-none font-light text-gray-900">62.</p>
+                        <p className="mt-4 text-gray-700 text-xl font-light">62450 м² выполненных объектов</p>
                     </div>
                 </div>
             </div>

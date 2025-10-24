@@ -27,7 +27,7 @@ export default function AboutPage() {
             <ServiceHero
                 title="О нас"
                 description="Мы создаем стильные и качественные решения в строительстве и дизайне интерьеров, ориентируясь на ваш вкус и комфорт."
-                image="/about.jpg"
+                image="/font-blok20.jpg"
             />
             <AboutFirm />
             <ProjectsSection />
