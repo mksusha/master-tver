@@ -234,7 +234,7 @@ export default function QuizSection() {
                 {/* Фото справа (только десктоп) */}
                 <div className="relative w-[30%] h-full hidden md:block">
                     <Image
-                        src="/first-blok9.jpg"
+                        src="/fb1.png"
                         alt="quiz side"
                         fill
                         className="object-cover"

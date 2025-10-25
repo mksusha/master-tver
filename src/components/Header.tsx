@@ -25,7 +25,7 @@ const Header: React.FC = () => {
     return (
         <header className="fixed top-4 left-0 w-full z-50">
             <div className="mx-auto max-w-[1600px] px-4 md:px-8">
-                <div className="bg-white/50 backdrop-blur-md border border-gray-200 rounded-3xl">
+                <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl">
                     <div className="relative flex items-center justify-between px-6 py-2">
                         {/* Логотип */}
                         <Link

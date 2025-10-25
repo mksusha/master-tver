@@ -124,15 +124,7 @@ export default function ContactPageSection() {
                                 onSubmit={handleSubmit}
                                 className="flex flex-col md:flex-row gap-3 w-full"
                             >
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Ваше имя"
-                                    value={form.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="flex-1 px-4 py-3 rounded-2xl border border-black  text-black placeholder-black focus:ring-1 focus:ring-black outline-none"
-                                />
+
                                 <input
                                     type="tel"
                                     name="phone"
@@ -148,7 +140,7 @@ export default function ContactPageSection() {
                                     className={`px-6 py-3 rounded-2xl border border-brand w-full md:w-[180px] transition-all duration-300 ${
                                         loading
                                             ? "bg-brand text-white opacity-80 cursor-default"
-                                            : "bg-brand text-white hover:bg-white hover:text-[#B49C6C]"
+                                            : "bg-brand text-white hover:bg-transparent  hover:text-[#B49C6C]"
                                     }`}
                                 >
                                     {loading ? "Отправка..." : "Заказать звонок"}

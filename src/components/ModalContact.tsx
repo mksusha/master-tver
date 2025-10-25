@@ -76,15 +76,7 @@ export default function ModalContact({ open, onClose }: ModalContactProps) {
                         </p>
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Ваше имя"
-                                value={form.name}
-                                onChange={handleChange}
-                                required
-                                className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#B49C6C]/60 transition"
-                            />
+
                             <input
                                 type="tel"
                                 name="phone"

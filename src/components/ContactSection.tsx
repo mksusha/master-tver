@@ -70,14 +70,14 @@ export default function ContactSection() {
                     <address className="flex flex-col gap-3 mb-6 not-italic">
                         <div className="flex items-center gap-3 text-lg text-gray-800">
                             <Phone className="w-5 h-5 text-[#B49C6C]" />
-                            <a href="tel:+79001234567" aria-label="Позвонить в Гермес" className="hover:text-[#B49C6C] transition">
-                                +7 (900) 123-45-67
+                            <a href="tel:+79991508400" aria-label="Позвонить в Гермес" className="hover:text-[#B49C6C] transition">
+                                +7 (999) 150-84-00
                             </a>
                         </div>
                         <div className="flex items-center gap-3 text-lg text-gray-800">
                             <Mail className="w-5 h-5 text-[#B49C6C]" />
-                            <a href="mailto:design@gmail.com" aria-label="Написать на почту Гермес" className="hover:text-[#B49C6C] transition">
-                                design@gmail.com
+                            <a href="mailto:germesprostroy@mail.ru" aria-label="Написать на почту Гермес" className="hover:text-[#B49C6C] transition">
+                                germesprostroy@mail.ru
                             </a>
                         </div>
 
@@ -106,17 +106,7 @@ export default function ContactSection() {
                             </p>
                         ) : (
                             <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
-                                <label className="sr-only" htmlFor="name">Ваше имя</label>
-                                <input
-                                    id="name"
-                                    type="text"
-                                    name="name"
-                                    placeholder="Ваше имя"
-                                    value={form.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="flex-1 px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-[#B49C6C] outline-none"
-                                />
+
                                 <label className="sr-only" htmlFor="phone">Телефон</label>
                                 <input
                                     id="phone"
