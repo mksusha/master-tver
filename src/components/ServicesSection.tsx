@@ -14,7 +14,7 @@ export default function ServicesSection() {
         },
         {
             title: "Комплексный ремонт",
-            image: "/first-blok10.jpg",
+            image: "/v.png",
             description:
                 "Полный цикл ремонтных работ — от черновых до финишной отделки.",
             link: "/renovation",

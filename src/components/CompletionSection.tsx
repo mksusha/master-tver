@@ -6,22 +6,22 @@ export default function FurnishingSection() {
     const items = [
         {
             title: "Мебель",
-            image: "/ex1.webp",
+            image: "/meb.png",
             description: "Подбор и поставка мебели для всех зон интерьера, полностью по дизайн-проекту.",
         },
         {
             title: "Освещение",
-            image: "/svet.webp",
+            image: "/svet.png",
             description: "Светильники и лампы, создающие комфортную и стильную атмосферу.",
         },
         {
             title: "Сантехника",
-            image: "/santech.webp",
+            image: "/san.png",
             description: "Современная сантехника и комплектующие для ванной комнаты.",
         },
         {
             title: "Декор",
-            image: "/proj5.jpg",
+            image: "/dec.png",
             description: "Элементы декора и аксессуары для завершённого образа интерьера.",
         },
     ];

@@ -14,7 +14,7 @@ const questions: Question[] = [
     {
         question: "Ремонт какого объекта вас интересует?",
         options: ["Новостройка", "Дом", "Вторичное жильё", "Коммерческая недвижимость"],
-        imageOptions: ["/vtorichka.jpg", "/dom.jpg", "/nov.jpg", "/font-blok23.jpg"],
+        imageOptions: ["/vtorichka.jpg", "/дом.jpg", "/вторичка.jpg", "/комерция.jpg"],
     },
     {
         question: "Укажите общую площадь помещений, кв.м.",
