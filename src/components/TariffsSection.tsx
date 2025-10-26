@@ -4,51 +4,51 @@ import { useState } from "react";
 import { CheckCircle } from "lucide-react";
 
 export default function TariffsSection() {
-    const [activeTab, setActiveTab] = useState<"design" | "repair">("design");
-
-    const designTariffs = [
-        {
-            title: "Полный дизайн-проект",
-            price: "2900 ₽/м²",
-            desc: "Полный пакет: планировка, визуализации, чертежи и подбор материалов.",
-            includes: ["Планировочные решения", "3D-визуализации", "Рабочие чертежи", "Подбор материалов"],
-        },
-        {
-            title: "Коллажный дизайн-проект",
-            price: "2300 ₽/м²",
-            desc: "Концептуальные решения и коллажи для визуализации интерьера.",
-            includes: ["Коллажи по помещениям", "Планировка", "Рекомендации по отделке"],
-        },
-        {
-            title: "Технический проект",
-            price: "1200 ₽/м²",
-            desc: "Рабочие чертежи и схемы для самостоятельного выполнения ремонта.",
-            includes: ["Рабочие чертежи", "Электрика и сантехника", "Планы потолков и полов"],
-        },
-    ];
+    const [activeTab, setActiveTab] = useState<"repair" | "design">("repair");
 
     const repairTariffs = [
         {
             title: "Косметический ремонт",
-            price: "от 9000 ₽/м²",
+            price: "от 9 000 ₽/м²",
             desc: "Обновление интерьера без перепланировки и демонтажа конструкций.",
             includes: ["Шпаклёвка и покраска", "Поклейка обоев", "Замена напольного покрытия"],
         },
         {
             title: "Капитальный ремонт",
-            price: "от 15000 ₽/м²",
+            price: "от 15 000 ₽/м²",
             desc: "Полная замена отделки, коммуникаций, сантехники и электрики.",
             includes: ["Полный демонтаж", "Новая электрика и сантехника", "Выравнивание стен и полов"],
         },
         {
             title: "Авторский ремонт",
-            price: "от 29000 ₽/м²",
+            price: "от 29 000 ₽/м²",
             desc: "Элитный ремонт по индивидуальному дизайн-проекту с авторским надзором.",
             includes: ["Премиальные материалы", "Индивидуальные решения", "Авторский надзор и контроль"],
         },
     ];
 
-    const currentTariffs = activeTab === "design" ? designTariffs : repairTariffs;
+    const designTariffs = [
+        {
+            title: "Полный дизайн-проект",
+            price: "от 2 900 ₽/м²",
+            desc: "Полный пакет: планировка, визуализации, чертежи и подбор материалов.",
+            includes: ["Планировочные решения", "3D-визуализации", "Рабочие чертежи", "Подбор материалов"],
+        },
+        {
+            title: "Коллажный дизайн-проект",
+            price: "от 2 300 ₽/м²",
+            desc: "Концептуальные решения и коллажи для визуализации интерьера.",
+            includes: ["Коллажи по помещениям", "Планировка", "Рекомендации по отделке"],
+        },
+        {
+            title: "Технический проект",
+            price: "от 1 200 ₽/м²",
+            desc: "Рабочие чертежи и схемы для самостоятельного выполнения ремонта.",
+            includes: ["Рабочие чертежи", "Электрика и сантехника", "Планы потолков и полов"],
+        },
+    ];
+
+    const currentTariffs = activeTab === "repair" ? repairTariffs : designTariffs;
 
     return (
         <section className="mt-28 mb-28 flex justify-center px-4 md:px-8">
@@ -59,23 +59,13 @@ export default function TariffsSection() {
                         Тарифы
                     </h2>
                     <p className="text-base md:text-lg text-gray-600 max-w-[700px] mx-auto">
-                        Выберите подходящий формат — дизайн или ремонт. Мы подготовили прозрачные тарифы без скрытых платежей.
+                        Выберите подходящий формат — ремонт или дизайн. Мы подготовили прозрачные тарифы без скрытых платежей.
                     </p>
                 </div>
 
                 {/* Переключатель */}
                 <div className="flex justify-center mb-10">
                     <div className="flex bg-secondary rounded-full p-1">
-                        <button
-                            onClick={() => setActiveTab("design")}
-                            className={`px-6 py-2 rounded-full font-medium transition-all ${
-                                activeTab === "design"
-                                    ? "bg-[#B49C6C] text-white shadow-md"
-                                    : "text-gray-700 hover:text-black"
-                            }`}
-                        >
-                            Дизайн-проекты
-                        </button>
                         <button
                             onClick={() => setActiveTab("repair")}
                             className={`px-6 py-2 rounded-full font-medium transition-all ${
@@ -85,6 +75,16 @@ export default function TariffsSection() {
                             }`}
                         >
                             Ремонт
+                        </button>
+                        <button
+                            onClick={() => setActiveTab("design")}
+                            className={`px-6 py-2 rounded-full font-medium transition-all ${
+                                activeTab === "design"
+                                    ? "bg-[#B49C6C] text-white shadow-md"
+                                    : "text-gray-700 hover:text-black"
+                            }`}
+                        >
+                            Дизайн-проекты
                         </button>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ export default function TariffsSection() {
                             className="rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all p-8 flex flex-col items-start"
                         >
                             <h3 className="text-3xl text-gray-900 mb-4">{item.title}</h3>
-                            <p className="text-[#B49C6C] text-5xl  mb-4">{item.price}</p>
+                            <p className="text-[#B49C6C] text-5xl mb-4">{item.price}</p>
                             <p className="text-gray-700 text-xl mb-4 leading-relaxed">{item.desc}</p>
 
                             <ul className="space-y-2 mt-2">

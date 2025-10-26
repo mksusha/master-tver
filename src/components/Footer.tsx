@@ -130,6 +130,13 @@ export default function Footer() {
                         </p>
                     </div>
 
+                    {/* Дисклеймер */}
+                    <div className="mt-10 text-center border-t border-gray-200 pt-4">
+                        <p className="text-[12px] md:text-sm text-gray-500 leading-relaxed max-w-[900px] mx-auto px-4">
+                            Обращаем ваше внимание на то, что данный интернет-сайт, а также вся информация о товарах и ценах, предоставленная на нём, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
+                        </p>
+                    </div>
+
                     {/* Нижняя линия */}
                     <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
                         © {new Date().getFullYear()} Гермес. Все права защищены.
