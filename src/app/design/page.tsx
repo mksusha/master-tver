@@ -9,6 +9,7 @@ import MapSection from "@/components/MapSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Script from "next/script";
+import DesignTariffsSection from "@/components/DesignTariffsSection";
 
 export const metadata = {
     title: "Дизайн интерьера в Твери — Гермес",
@@ -59,6 +60,7 @@ export default function DesignPage() {
             <DesignVideos />
             <DesignSteps />
             <ProjectStages />
+            <DesignTariffsSection></DesignTariffsSection>
             <ProjectsSection />
             <MapSection />
             <FAQSection />

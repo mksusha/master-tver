@@ -8,6 +8,7 @@ import MapSection from "@/components/MapSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Script from "next/script";
+import RepairTariffsSection from "@/components/RepairTariffsSection";
 
 export const metadata = {
     title: "Комплексный ремонт в Твери — Гермес",
@@ -57,6 +58,8 @@ export default function RepairPage() {
             />
             <RenovationFeatures />
             <RepairGallery />
+            <RepairTariffsSection></RepairTariffsSection>
+
             <RenovationStages />
             <MapSection />
             <FAQSection />

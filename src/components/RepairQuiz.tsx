@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { FaTelegramPlane, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
 interface Question {
     question: string;
@@ -18,7 +19,7 @@ const questions: Question[] = [
     },
     {
         question: "Укажите общую площадь помещений, кв.м.",
-        options: ["До 30", "от 30 до 50", "от 50 до 70", "от 70 до 90", "от 90 до 110", "более 110"],
+        options: ["До 30 кв.м.", "30-70 кв.м", "70-100 кв.м", "100-200 кв.м", "свыше 200 кв.м", ],
     },
     {
         question: "Какой вид ремонта вас интересует?",
@@ -34,6 +35,10 @@ const questions: Question[] = [
             "/first-blok15.jpg",
             "/first-blok18.jpg",
         ],
+    },
+    {
+        question: "Сколько комнат в квартире?",
+        options: ["Частичный ремонт", "Студия",  "1 комната", "2 комнаты", "3 комнаты", "4 и более комнат"],
     },
     {
         question: "У вас уже есть дизайн-проект?",
@@ -58,6 +63,7 @@ export default function QuizSection() {
     const [phone, setPhone] = useState("");
     const [consent, setConsent] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [contactMethod, setContactMethod] = useState("");
 
     const totalSteps = questions.length + 1;
     const current = questions[step];
@@ -70,11 +76,19 @@ export default function QuizSection() {
         if (step > 0) setStep(step - 1);
     };
 
+    const handleOptionSelect = (option: string) => {
+        setAnswers({ ...answers, [step]: option });
+        // Автоматический переход на следующий шаг
+        setTimeout(() => {
+            if (step < questions.length) nextStep();
+        }, 300);
+    };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!phone || !consent) return;
         setSubmitted(true);
-        console.log("Ответы:", answers, "Телефон:", phone);
+        console.log("Ответы:", answers, "Телефон:", phone, "Связь:", contactMethod);
     };
 
     return (
@@ -112,9 +126,7 @@ export default function QuizSection() {
                                             {current.options.map((option, i) => (
                                                 <button
                                                     key={i}
-                                                    onClick={() =>
-                                                        setAnswers({ ...answers, [step]: option })
-                                                    }
+                                                    onClick={() => handleOptionSelect(option)}
                                                     className={`relative flex-1 rounded-2xl m-1 overflow-hidden transition-all duration-300 ${
                                                         answers[step] === option
                                                             ? "ring-4 ring-[#B49C6C]"
@@ -140,9 +152,7 @@ export default function QuizSection() {
                                             {current.options.map((option, i) => (
                                                 <button
                                                     key={i}
-                                                    onClick={() =>
-                                                        setAnswers({ ...answers, [step]: option })
-                                                    }
+                                                    onClick={() => handleOptionSelect(option)}
                                                     className={`h-20 border rounded-2xl text-gray-700 font-medium transition-all duration-300 hover:shadow-md hover:border-[#B49C6C] ${
                                                         answers[step] === option
                                                             ? "border-[#B49C6C] bg-[#fffaf2]"
@@ -177,6 +187,46 @@ export default function QuizSection() {
                                         required
                                     />
 
+                                    <p className="text-gray-700 text-sm mt-2 text-center">
+                                        Куда удобнее отправить?
+                                    </p>
+
+                                    <div className="flex justify-center gap-4">
+                                        <button
+                                            type="button"
+                                            onClick={() => setContactMethod("Telegram")}
+                                            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
+                                                contactMethod === "Telegram"
+                                                    ? "bg-[#B49C6C] text-white"
+                                                    : "bg-white text-gray-700 hover:bg-gray-100"
+                                            }`}
+                                        >
+                                            <FaTelegramPlane /> Telegram
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => setContactMethod("WhatsApp")}
+                                            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
+                                                contactMethod === "WhatsApp"
+                                                    ? "bg-[#B49C6C] text-white"
+                                                    : "bg-white text-gray-700 hover:bg-gray-100"
+                                            }`}
+                                        >
+                                            <FaWhatsapp /> WhatsApp
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => setContactMethod("Phone")}
+                                            className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
+                                                contactMethod === "Phone"
+                                                    ? "bg-[#B49C6C] text-white"
+                                                    : "bg-white text-gray-700 hover:bg-gray-100"
+                                            }`}
+                                        >
+                                            <FaPhoneAlt /> Звонок
+                                        </button>
+                                    </div>
+
                                     <label className="flex items-center gap-2 text-sm text-gray-600">
                                         <input
                                             type="checkbox"
@@ -189,7 +239,7 @@ export default function QuizSection() {
 
                                     <button
                                         type="submit"
-                                        disabled={!phone || !consent}
+                                        disabled={!phone || !consent || !contactMethod}
                                         className="mt-2 bg-[#B49C6C] text-white py-3 rounded-full font-medium hover:opacity-90 disabled:opacity-50 transition-all"
                                     >
                                         Отправить
@@ -219,26 +269,13 @@ export default function QuizSection() {
                             >
                                 Назад
                             </button>
-
-                            <button
-                                onClick={nextStep}
-                                disabled={!answers[step]}
-                                className="px-8 py-2 rounded-full border border-[#B49C6C] text-[#B49C6C] hover:bg-[#B49C6C] hover:text-white disabled:opacity-30"
-                            >
-                                Далее →
-                            </button>
                         </div>
                     )}
                 </div>
 
-                {/* Фото справа (только десктоп) */}
+                {/* Фото справа */}
                 <div className="relative w-[30%] h-full hidden md:block">
-                    <Image
-                        src="/fb1.png"
-                        alt="quiz side"
-                        fill
-                        className="object-cover"
-                    />
+                    <Image src="/fb1.png" alt="quiz side" fill className="object-cover" />
                 </div>
             </section>
         </section>
