@@ -44,9 +44,7 @@ export default function RenovationStages() {
                             <h3 className="text-2xl md:text-3xl font-medium text-gray-900 mb-2">
                                 {stage.title}
                             </h3>
-                            <p className="text-[#B49C6C] font-medium text-xl mb-4">
-                                {stage.duration}
-                            </p>
+
                             <p className="text-gray-700 text-lg leading-relaxed">
                                 {stage.text}
                             </p>
