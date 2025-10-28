@@ -84,12 +84,29 @@ export default function QuizSection() {
         }, 300);
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!phone || !consent) return;
-        setSubmitted(true);
-        console.log("Ответы:", answers, "Телефон:", phone, "Связь:", contactMethod);
+        if (!phone || !consent || !contactMethod) return;
+
+        try {
+            const res = await fetch("/api/quiz", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ answers, phone, contactMethod }),
+            });
+
+            const data = await res.json();
+            if (data.success) {
+                setSubmitted(true);
+            } else {
+                alert("Ошибка отправки, попробуйте позже");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Ошибка отправки, попробуйте позже");
+        }
     };
+
 
     return (
         <section className="max-w-[1600px] px-4 md:px-8 m-auto">
