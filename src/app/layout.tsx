@@ -26,8 +26,8 @@ export default function RootLayout({
             "addressLocality": "Тверь",
             "addressRegion": "Тверская область",
             "postalCode": "170000",
-            "addressCountry": "RU"
-        }
+            "addressCountry": "RU",
+        },
     };
 
     return (
@@ -44,7 +44,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Google Tag Manager (noscript) */}
         <noscript>
             <iframe
                 src="https://www.googletagmanager.com/ns.html?id=GTM-T9LBRG3L"
@@ -68,8 +67,47 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* ✅ Яндекс.Метрика */}
+        <Script id="yandex-metrika" strategy="afterInteractive">
+            {`
+            (function(m,e,t,r,i,k,a){
+              m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+              m[i].l=1*new Date();
+              for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) { return; }
+              }
+              k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+              k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=104903919', 'ym');
+
+            ym(104903919, 'init', {
+              defer: true,
+              webvisor: true,
+              clickmap: true,
+              ecommerce: "dataLayer",
+              accurateTrackBounce: true,
+              trackLinks: true
+            });
+          `}
+        </Script>
+
+        {/* noscript для Метрики */}
+        <noscript>
+            <div>
+                <img
+                    src="https://mc.yandex.ru/watch/104903919"
+                    style={{ position: "absolute", left: "-9999px" }}
+                    alt=""
+                />
+            </div>
+        </noscript>
+
         {/* Schema.org микроразметка */}
-        <Script id="schema-org" strategy="afterInteractive" type="application/ld+json">
+        <Script
+            id="schema-org"
+            strategy="afterInteractive"
+            type="application/ld+json"
+        >
             {JSON.stringify(organizationSchema)}
         </Script>
 
