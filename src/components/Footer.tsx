@@ -19,9 +19,9 @@ export default function Footer() {
     return (
         <footer className="mt-24 px-4 md:px-8">
             <div className="max-w-[1600px] mx-auto bg-secondary rounded-t-3xl shadow-sm overflow-hidden">
-                {/* Верхняя часть футера */}
+                {}
                 <div className="flex flex-col items-center md:flex-row md:justify-between px-6 md:px-12 py-6 border-b border-gray-200">
-                    {/* Логотип */}
+                    {}
                     <div className="flex items-center justify-center w-full md:w-auto mb-4 md:mb-0">
                         <img
                             src="/logo_sc1.png"
@@ -30,9 +30,9 @@ export default function Footer() {
                         />
                     </div>
 
-                    {/* Навигация */}
+                    {}
                     <nav className="flex flex-col items-center gap-4 md:flex-row md:items-center md:gap-6 text-base md:text-lg font-medium text-gray-700 w-full md:w-auto">
-                        {/* Десктоп - услуги с ховером */}
+                        {}
                         <div className="relative group hidden md:inline-block cursor-pointer">
                             <span className="flex items-center gap-1 hover:text-[#B49C6C] transition">
                                 Услуги <ChevronDown size={16} />
@@ -50,7 +50,7 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        {/* Мобильные - услуги с кликом */}
+                        {}
                         <div className="md:hidden w-full flex flex-col items-center">
                             <button
                                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -87,8 +87,7 @@ export default function Footer() {
                         </Link>
                     </nav>
 
-                    {/* Соцсети */}
-                    <div className="flex items-center justify-center gap-4 mt-4 md:mt-0">
+                                        <div className="flex items-center justify-center gap-4 mt-4 md:mt-0">
                         <a
                             href="https://t.me/yourchannel"
                             target="_blank"
@@ -110,8 +109,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Нижняя часть футера */}
-                <div className="px-6 md:px-12 py-8 text-center md:text-left text-gray-700">
+                                <div className="px-6 md:px-12 py-8 text-center md:text-left text-gray-700">
                     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
                         <div className="text-center md:text-left">
                             <p className="text-base font-medium text-gray-800">
@@ -130,15 +128,13 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Дисклеймер */}
-                    <div className="mt-10 text-center border-t border-gray-200 pt-4">
+                                        <div className="mt-10 text-center border-t border-gray-200 pt-4">
                         <p className="text-[12px] md:text-sm text-gray-500 leading-relaxed max-w-[900px] mx-auto px-4">
                             Обращаем ваше внимание на то, что данный интернет-сайт, а также вся информация о товарах и ценах, предоставленная на нём, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
                         </p>
                     </div>
 
-                    {/* Нижняя линия */}
-                    <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
+                                        <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
                         © {new Date().getFullYear()} Гермес. Все права защищены.
                     </div>
                 </div>

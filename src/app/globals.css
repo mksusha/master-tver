@@ -26,14 +26,14 @@
 
 :root {
 
-  --brand: #B49C6C; /* акцентный цвет */
-  --secondary: #F8F8F8; /* второй цвет */
+  --brand: #B49C6C;
+  --secondary: #F8F8F8;
 }
 
 @theme inline {
 
   --color-brand: var(--brand);
-  --color-secondary: var(--secondary); /* ✅ регистрируем второй цвет */
+  --color-secondary: var(--secondary);
 
 }
 

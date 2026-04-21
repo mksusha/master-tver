@@ -43,8 +43,7 @@ export default function ContactPageSection() {
     return (
         <section className="mt-32 mb-20 flex justify-center px-4 md:px-8">
             <div className="w-full max-w-[1600px] grid grid-cols-1 md:grid-cols-2">
-                {/* Левая часть */}
-                <div className="flex flex-col justify-between bg-secondary rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none p-6 sm:p-8 md:p-12 shadow-sm h-full text-center md:text-left">
+                                <div className="flex flex-col justify-between bg-secondary rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none p-6 sm:p-8 md:p-12 shadow-sm h-full text-center md:text-left">
                     <div>
                         <h2 className="text-2xl sm:text-3xl md:text-5xl text-black mb-5">
                             Контакты
@@ -62,8 +61,7 @@ export default function ContactPageSection() {
                             Заезжайте в наш офис — будем рады обсудить ваш проект лично
                         </p>
 
-                        {/* Контакты */}
-                        <div className="flex flex-col items-center md:items-start gap-3 mb-6">
+                                                <div className="flex flex-col items-center md:items-start gap-3 mb-6">
                             <div className="flex items-center gap-3 text-black text-base md:text-lg">
                                 <Phone className="w-5 h-5 text-black" />
                                 <a
@@ -84,10 +82,8 @@ export default function ContactPageSection() {
                             </div>
 
 
-                            {/* Соцсети */}
-                            <div className="flex justify-center md:justify-start gap-4 mt-3">
-                                {/* Telegram */}
-                                <a
+                                                        <div className="flex justify-center md:justify-start gap-4 mt-3">
+                                                                <a
                                     href="https://t.me/yourchannel"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -97,8 +93,7 @@ export default function ContactPageSection() {
                                     <span className="hidden sm:inline text-base">Telegram</span>
                                 </a>
 
-                                {/* WhatsApp */}
-                                <a
+                                                                <a
                                     href="https://wa.me/yourphone"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -113,8 +108,7 @@ export default function ContactPageSection() {
                         </div>
                     </div>
 
-                    {/* Форма */}
-                    <div className="min-h-[58px] mt-4">
+                                        <div className="min-h-[58px] mt-4">
                         {success ? (
                             <p className="text-center text-black text-base py-3 rounded-2xl border border-white bg-white/10">
                                 Заявка отправлена, мы свяжемся с вами в ближайшее время
@@ -150,8 +144,7 @@ export default function ContactPageSection() {
                     </div>
                 </div>
 
-                {/* Правая часть — карта */}
-                <div className="relative w-full h-[300px] sm:h-[400px] md:h-auto rounded-b-3xl md:rounded-b-none md:rounded-r-3xl overflow-hidden shadow-sm">
+                                <div className="relative w-full h-[300px] sm:h-[400px] md:h-auto rounded-b-3xl md:rounded-b-none md:rounded-r-3xl overflow-hidden shadow-sm">
                     <iframe
                         src="https://yandex.ru/map-widget/v1/?ll=35.896193%2C56.839325&mode=search&oid=199673139492&ol=biz&sll=35.896193%2C56.839325&sspn=0.010335%2C0.004043&text=%D0%B3%20%D1%82%D0%B2%D0%B5%D1%80%D1%8C%20%D1%81%D0%BA%20%D0%B3%D0%B5%D1%80%D0%BC%D0%B5%D1%81&z=16.98"
                         frameBorder="0"

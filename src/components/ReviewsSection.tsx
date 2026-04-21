@@ -8,8 +8,7 @@ export default function ReviewsSection() {
             aria-label="Отзывы клиентов компании Гермес"
             className="mt-24 mb-24 flex flex-col items-center justify-center px-4 md:px-8 relative z-10"
         >
-            {/* Заголовок */}
-            <header className="text-center mb-12">
+                        <header className="text-center mb-12">
                 <h2 className="text-3xl md:text-5xl font-medium text-[#B49C6C] mb-5">
                     Отзывы наших клиентов
                 </h2>
@@ -19,11 +18,9 @@ export default function ReviewsSection() {
                 </p>
             </header>
 
-            {/* Основная сетка */}
-            <div className="max-w-[1600px] w-full grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-[500px] md:max-h-[750px]">
+                        <div className="max-w-[1600px] w-full grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-[500px] md:max-h-[750px]">
 
-                {/* Левая колонка */}
-                <div className="grid grid-rows-3 gap-6 h-full">
+                                <div className="grid grid-rows-3 gap-6 h-full">
                     <article className="bg-secondary rounded-3xl p-6 flex flex-col justify-start shadow-sm">
                         <header className="flex items-center gap-4 mb-4">
                             <h3 className="font-semibold text-lg text-gray-900">Алексей</h3>
@@ -56,8 +53,7 @@ export default function ReviewsSection() {
                     </article>
                 </div>
 
-                {/* Средняя колонка */}
-                <div className="grid grid-rows-2 gap-6 h-full">
+                                <div className="grid grid-rows-2 gap-6 h-full">
                     <div className="relative rounded-3xl overflow-hidden shadow-sm">
                         <Image
                             src="/h1.jpg"
@@ -79,8 +75,7 @@ export default function ReviewsSection() {
                     </article>
                 </div>
 
-                {/* Правая колонка — Яндекс отзывы */}
-                <div className="rounded-3xl overflow-hidden border-2 border-secondary bg-white shadow-sm
+                                <div className="rounded-3xl overflow-hidden border-2 border-secondary bg-white shadow-sm
                         w-full lg:w-auto lg:h-full">
                     <div className="w-full h-[400px] md:h-[600px] lg:h-full">
                         <iframe
@@ -92,8 +87,7 @@ export default function ReviewsSection() {
                             title="Отзывы на Яндекс.Картах"
                         />
                     </div>
-                    {/* SEO fallback для ботов */}
-                    <noscript>
+                                        <noscript>
                         <p className="p-4 text-gray-700">
                             Ознакомьтесь с отзывами наших клиентов на Яндекс.Картах: сотрудничество с Гермес приносит аккуратный ремонт, профессионализм и довольных клиентов.
                         </p>

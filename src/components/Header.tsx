@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <div className="mx-auto max-w-[1600px] px-4 md:px-8">
                 <div className="bg-white/70 backdrop-blur-md border border-gray-200 rounded-3xl">
                     <div className="relative flex items-center justify-between px-6 py-2">
-                        {/* Логотип */}
+                        {}
                         <Link
                             href="/"
                             aria-label="Главная страница Гермес — ремонт и дизайн интерьера в Твери"
@@ -42,9 +42,9 @@ const Header: React.FC = () => {
                             />
                         </Link>
 
-                        {/* Навигация — по центру экрана */}
+                        {}
                         <nav className="hidden md:flex items-center space-x-8 text-xl text-gray-700 absolute left-1/2 -translate-x-1/2">
-                            {/* Услуги с выпадашкой */}
+                            {}
                             <div className="relative group cursor-pointer">
                 <span className="flex items-center gap-1 relative px-1 py-1 hover:text-[#B49C6C] transition">
                   Услуги
@@ -52,10 +52,10 @@ const Header: React.FC = () => {
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#B49C6C] group-hover:w-full transition-all duration-300"></span>
                 </span>
 
-                                {/* Hover отступ */}
+                                {}
                                 <div className="absolute top-full left-0 w-full h-4"></div>
 
-                                {/* Выпадающее меню */}
+                                {}
                                 <div className="absolute top-[calc(100%+0.5rem)] -left-3 bg-white rounded-3xl shadow-2xl py-4 px-4 flex flex-col gap-3 min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 ease-out">
                                     {services.map((srv, i) => (
                                         <Link
@@ -69,7 +69,7 @@ const Header: React.FC = () => {
                                 </div>
                             </div>
 
-                            {/* Остальные пункты */}
+                            {}
                             {menuItems.map((item, idx) => (
                                 <Link key={idx} href={item.href!}>
                   <span className="relative group px-1 py-1 cursor-pointer hover:text-[#B49C6C] transition">
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                             ))}
                         </nav>
 
-                        {/* Контакты и соцсети */}
+                        {}
                         <div className="hidden md:flex items-center gap-8">
                             <a
                                 href="tel:89991508400"
@@ -111,7 +111,7 @@ const Header: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Бургер для мобильных */}
+                        {}
                         <div className="md:hidden">
                             <button
                                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Мобильное меню */}
+                    {}
                     <div
                         className={`md:hidden border-t border-gray-200 bg-white/40 backdrop-blur-md rounded-b-xl shadow-lg transition-all duration-300 ${
                             mobileOpen
@@ -155,7 +155,7 @@ const Header: React.FC = () => {
                                 </Link>
                             ))}
 
-                            {/* Телефон (мобильная версия) */}
+                            {}
                             <a
                                 href="tel:89991508400"
                                 className="mt-3 text-[#B49C6C] text-lg font-medium hover:text-black transition"
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
                                 8&nbsp;(999)&nbsp;150-84-00
                             </a>
 
-                            {/* Соцсети мобильная версия */}
+                            {}
                             <div className="flex gap-4 mt-3">
                                 <a
                                     href="https://t.me/yourchannel"

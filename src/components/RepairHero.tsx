@@ -14,7 +14,7 @@ export default function RepairHero() {
         >
             <div className="relative w-full max-w-[1600px] h-[42vw] max-h-[790px] min-h-[500px] md:min-h-[700px] rounded-3xl rounded-br-none overflow-hidden">
 
-                {/* Фото-фон с LCP */}
+                {}
                 <Image
                     src="/first-blok.jpg"
                     alt="Дизайн-проект интерьера премиум-класса в Твери"
@@ -25,7 +25,7 @@ export default function RepairHero() {
                 />
                 <div className="absolute inset-0 bg-black/30" />
 
-                {/* Текст */}
+                {}
                 <div className="absolute top-16 left-4 md:top-24 md:left-16 text-white z-10">
                     <h1 className="text-2xl sm:text-3xl md:text-7xl leading-tight max-w-[300px] sm:max-w-[400px] md:max-w-[600px]">
                         Реализуем <br /> дизайн-проекты интерьера <br /> в Твери
@@ -35,7 +35,7 @@ export default function RepairHero() {
                     </p>
                 </div>
 
-                {/* Кнопка */}
+                {}
                 <div className="absolute bottom-0 right-0 flex flex-col items-center z-10">
                     <div className="absolute bottom-[-1px] right-[-14px] md:right-[-19px] w-[240px] sm:w-[300px] md:w-[345px] h-[80px] sm:h-[100px] md:h-[110px] -z-10">
                         <Image
@@ -60,7 +60,7 @@ export default function RepairHero() {
                 </div>
             </div>
 
-            {/* Модалка */}
+            {}
             <ModalContact open={open} onClose={() => setOpen(false)} />
         </section>
     );

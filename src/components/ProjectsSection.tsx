@@ -21,8 +21,7 @@ export default function ProjectsSection() {
             className="mt-32 mb-32 w-full bg-white"
         >
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Левая колонка — заголовок */}
-                <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
+                                <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
                     <p className="uppercase text-2xl tracking-widest text-[#B49C6C]">
                         Наши проекты
                     </p>
@@ -38,8 +37,7 @@ export default function ProjectsSection() {
                     </p>
                 </div>
 
-                {/* Правая колонка — галерея */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                     {projects.map((project, idx) => (
                         <article
                             key={idx}

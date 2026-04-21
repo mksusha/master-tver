@@ -5,13 +5,16 @@ import Script from "next/script";
 export const metadata: Metadata = {
     title: "Ремонт квартир в Твери",
     description: "Качественный ремонт под ключ",
+    verification: {
+        yandex: "3349265e1285ae0b",
+    },
 };
 
 export default function RootLayout({
                                        children,
-                                   }: Readonly<{
+                                   }: {
     children: React.ReactNode;
-}>) {
+}) {
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -33,7 +36,7 @@ export default function RootLayout({
     return (
         <html lang="ru">
         <body className="font-sans antialiased">
-        {/* Google Tag Manager */}
+
         <Script id="gtm-script" strategy="afterInteractive">
             {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -53,11 +56,11 @@ export default function RootLayout({
             ></iframe>
         </noscript>
 
-        {/* Google Analytics */}
         <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-ZLC657LJ5P"
             strategy="afterInteractive"
         />
+
         <Script id="ga-script" strategy="afterInteractive">
             {`
             window.dataLayer = window.dataLayer || [];
@@ -67,8 +70,8 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Яндекс.Метрика */}
-        <Script id="yandex-metrika" strategy="afterInteractive">
+        {/* Яндекс Метрика 1 */}
+        <Script id="yandex-metrika-1" strategy="afterInteractive">
             {`
             (function(m,e,t,r,i,k,a){
               m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -91,7 +94,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* noscript для Метрики */}
         <noscript>
             <div>
                 <img
@@ -102,7 +104,42 @@ export default function RootLayout({
             </div>
         </noscript>
 
-        {/* Schema.org микроразметка */}
+        {/* Яндекс Метрика 2 */}
+        <Script id="yandex-metrika-2" strategy="afterInteractive">
+            {`
+            (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) { return; }
+            }
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],
+            k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+            })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107159667','ym');
+
+            ym(107159667, 'init', {
+              ssr:true,
+              webvisor:true,
+              clickmap:true,
+              ecommerce:"dataLayer",
+              referrer: document.referrer,
+              url: location.href,
+              accurateTrackBounce:true,
+              trackLinks:true
+            });
+          `}
+        </Script>
+
+        <noscript>
+            <div>
+                <img
+                    src="https://mc.yandex.ru/watch/107159667"
+                    style={{ position: "absolute", left: "-9999px" }}
+                    alt=""
+                />
+            </div>
+        </noscript>
+
         <Script
             id="schema-org"
             strategy="afterInteractive"
@@ -112,6 +149,7 @@ export default function RootLayout({
         </Script>
 
         {children}
+
         </body>
         </html>
     );

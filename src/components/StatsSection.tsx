@@ -46,7 +46,7 @@ export default function AboutFirm() {
             className="w-full bg-white py-16 px-4 md:px-8"
         >
             <div className="max-w-[1600px] mx-auto">
-                {/* Верхний текст */}
+                {}
                 <header className="mb-12 md:mb-12">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-light leading-snug text-gray-900 max-w-full md:max-w-[1000px]">
                         <span className="text-brand font-normal">Гермес</span> — это архитектурное проектирование,
@@ -59,9 +59,9 @@ export default function AboutFirm() {
                     </p>
                 </header>
 
-                {/* Контейнер с фоном и карточками */}
+                {}
                 <div className="relative">
-                    {/* Фон за карточками */}
+                    {}
                     <div className="absolute inset-0 overflow-hidden rounded-3xl">
                         <Image
                             src="/stats.jpg"
@@ -69,11 +69,11 @@ export default function AboutFirm() {
                             fill
                             className="object-cover object-center"
                         />
-                        {/* Полупрозрачный слой с блюром */}
+                        {}
                         <div className="absolute inset-0 bg-black/20 rounded-3xl" />
                     </div>
 
-                    {/* Анимированные карточки */}
+                    {}
                     <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-2 sm:px-5 py-10 md:py-20 z-10">
                         {stats.map((stat, i) => (
                             <article

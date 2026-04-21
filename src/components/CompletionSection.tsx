@@ -29,8 +29,7 @@ export default function FurnishingSection() {
     return (
         <section className="flex justify-center mb-36 mt-8 md:mt-36 px-4 md:px-8">
             <div className="w-full max-w-[1600px]">
-                {/* Заголовок */}
-                <div className="text-center mb-12">
+                                <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-medium text-[#B49C6C] mb-5">
                         Комплектация объекта
                     </h2>
@@ -39,21 +38,18 @@ export default function FurnishingSection() {
                     </p>
                 </div>
 
-                {/* Карточки */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {items.map((item, index) => (
                         <div
                             key={index}
                             className="flex flex-col sm:flex-row rounded-3xl overflow-hidden bg-white"
                         >
-                            {/* Левая часть — текст */}
-                            <div className="flex flex-col justify-center bg-[#f8f8f8] p-6 sm:p-8 w-full sm:w-1/2">
+                                                        <div className="flex flex-col justify-center bg-[#f8f8f8] p-6 sm:p-8 w-full sm:w-1/2">
                                 <h3 className="text-xl md:text-3xl mb-3">{item.title}</h3>
                                 <p className="text-gray-700 text-sm md:text-base mb-8">{item.description}</p>
                             </div>
 
-                            {/* Правая часть — иконка */}
-                            <div
+                                                        <div
                                 className="relative w-full sm:w-1/2 h-[290px] sm:h-auto min-h-[290px] flex items-center justify-center bg-[#e5e5e5]">
                                 <Image
                                     src={item.image}

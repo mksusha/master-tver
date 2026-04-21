@@ -63,23 +63,23 @@ const ProjectStages: React.FC = () => {
     return (
         <section className="mt-24 mb-32 w-full bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8">
-                {/* Заголовок */}
+                {}
 
 
-                {/* Сетка этапов */}
+                {}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {stages.map((stage, i) => (
                         <div
                             key={i}
                             className="rounded-4xl overflow-hidden bg-secondary shadow-sm"
                         >
-                            {/* Верхняя часть */}
+                            {}
                             <div className="bg-brand  text-white px-6 py-8 rounded-t-4xl">
                                 <p className="text-4xl uppercase tracking-wider opacity-90">{stage.number}</p>
                                 <p className="text-lg mt-2 opacity-90">{stage.duration}</p>
                             </div>
 
-                            {/* Контент */}
+                            {}
                             <div className="p-8 space-y-6">
                                 {stage.items.map((item, j) => (
                                     <div key={j}>

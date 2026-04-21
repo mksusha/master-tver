@@ -46,8 +46,7 @@ export default function ContactSection() {
         >
             <div className="relative w-full max-w-[1600px] bg-white rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
 
-                {/* Левая часть — фото */}
-                <div className="relative h-[400px] md:h-auto">
+                                <div className="relative h-[400px] md:h-auto">
                     <Image
                         src="/first-blok19.jpg"
                         alt="Офис компании Гермес"
@@ -57,8 +56,7 @@ export default function ContactSection() {
                     />
                 </div>
 
-                {/* Правая часть — контакты */}
-                <div className="flex flex-col justify-center bg-secondary p-8 md:p-12">
+                                <div className="flex flex-col justify-center bg-secondary p-8 md:p-12">
                     <div className="flex flex-col gap-3 mb-6">
                         <h2 className="text-3xl md:text-4xl text-gray-900">Свяжитесь с нами</h2>
                         <p className="text-gray-600 text-base">
@@ -66,8 +64,7 @@ export default function ContactSection() {
                         </p>
                     </div>
 
-                    {/* Контакты */}
-                    <address className="flex flex-col gap-3 mb-6 not-italic">
+                                        <address className="flex flex-col gap-3 mb-6 not-italic">
                         <div className="flex items-center gap-3 text-lg text-gray-800">
                             <Phone className="w-5 h-5 text-[#B49C6C]" />
                             <a href="tel:+79991508400" aria-label="Позвонить в Гермес" className="hover:text-[#B49C6C] transition">
@@ -81,8 +78,7 @@ export default function ContactSection() {
                             </a>
                         </div>
 
-                        {/* Соцсети */}
-                        <div className="flex items-center gap-4 mt-2">
+                                                <div className="flex items-center gap-4 mt-2">
                             <a href="https://t.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-800 hover:text-[#0088cc] transition" aria-label="Telegram канал Гермес">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" className="text-brand w-6 h-6" fill="currentColor">
                                     <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zM174.2 82.4l-20.3 96c-1.5 6.8-5.5 8.4-11.2 5.2l-31-22.9-15 14.4c-1.7 1.7-3.1 3.1-6.3 3.1l2.3-32.4 59.1-53.3c2.6-2.3-0.6-3.7-4-1.4l-73 46-31.4-9.8c-6.8-2.1-6.9-6.8 1.4-10.1l122.8-47.4c5.6-2.1 10.5 1.4 8.7 10.1z"/>
@@ -98,8 +94,7 @@ export default function ContactSection() {
                         </div>
                     </address>
 
-                    {/* Форма */}
-                    <div className="min-h-[58px]">
+                                        <div className="min-h-[58px]">
                         {success ? (
                             <p className="text-center text-gray-900 text-lg font-medium py-3 rounded-2xl border border-gray-200 bg-white/70">
                                 Заявка отправлена, мы свяжемся с вами в ближайшее время

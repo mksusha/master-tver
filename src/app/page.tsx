@@ -1,4 +1,3 @@
-// app/page.tsx
 import Header from "@/components/Header";
 import RepairHero from "@/components/RepairHero";
 import ServicesSection from "@/components/ServicesSection";
@@ -14,7 +13,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import type { Metadata } from "next";
 import RepairQuiz from "@/components/RepairQuiz";
 
-// SEO для страницы
 export const metadata: Metadata = {
     title: "Ремонт квартир в Твери — Гермес",
     description: "Качественный ремонт под ключ в Твери. Дизайн интерьера, комплексный ремонт, авторский надзор.",
@@ -42,7 +40,6 @@ export const metadata: Metadata = {
 export default function Home() {
         return (
             <>
-                    {/* Основные секции страницы */}
                     <Header />
                     <RepairHero />
                     <ServicesSection />

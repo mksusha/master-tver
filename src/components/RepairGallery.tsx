@@ -31,8 +31,7 @@ const RepairGallery: React.FC = () => {
     return (
         <section className="w-full py-12 bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8">
-                {/* Заголовок */}
-                <div className="text-center mb-10">
+                                <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-5xl font-medium text-[#B49C6C] mb-5">
                         Наши проекты
                     </h2>
@@ -42,8 +41,7 @@ const RepairGallery: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Галерея */}
-                <div className="hidden md:flex justify-center gap-3 lg:gap-6 overflow-hidden">
+                                <div className="hidden md:flex justify-center gap-3 lg:gap-6 overflow-hidden">
                     {media.map((item, i) => (
                         <div
                             key={i}
@@ -70,8 +68,7 @@ const RepairGallery: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Мобильная версия */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-4 mt-10">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-4 mt-10">
                     {media.map((item, i) => (
                         <div
                             key={i}

@@ -78,8 +78,7 @@ export default function QuizSection() {
 
     const handleOptionSelect = (option: string) => {
         setAnswers({ ...answers, [step]: option });
-        // Автоматический переход на следующий шаг
-        setTimeout(() => {
+                setTimeout(() => {
             if (step < questions.length) nextStep();
         }, 300);
     };
@@ -111,9 +110,9 @@ export default function QuizSection() {
     return (
         <section className="max-w-[1600px] px-4 md:px-8 m-auto">
             <section className="flex flex-col md:flex-row h-auto md:h-[700px] max-w-[1600px] bg-[#f8f8f8] pl-4 md:pl-8 m-auto rounded-3xl overflow-hidden shadow-lg">
-                {/* Левая часть */}
+                {}
                 <div className="relative flex flex-col justify-between w-full md:w-[70%] p-6 md:p-12 h-full">
-                    {/* Прогресс */}
+                    {}
                     {!submitted && (
                         <div className="mb-4">
                             <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-3">
@@ -128,8 +127,7 @@ export default function QuizSection() {
                         </div>
                     )}
 
-                    {/* Контент */}
-                    <div className="flex flex-col flex-grow overflow-hidden">
+                                        <div className="flex flex-col flex-grow overflow-hidden">
                         {!submitted ? (
                             step < questions.length ? (
                                 <>
@@ -137,8 +135,7 @@ export default function QuizSection() {
                                         {current.question}
                                     </h2>
 
-                                    {/* Фото-варианты */}
-                                    {current.imageOptions ? (
+                                                                        {current.imageOptions ? (
                                         <div className="flex flex-col sm:flex-row md:h-auto flex-wrap gap-4  h-[500px] w-full">
                                             {current.options.map((option, i) => (
                                                 <button
@@ -276,8 +273,7 @@ export default function QuizSection() {
                         )}
                     </div>
 
-                    {/* Навигация */}
-                    {!submitted && step < questions.length && (
+                                        {!submitted && step < questions.length && (
                         <div className="flex justify-between mt-8">
                             <button
                                 onClick={prevStep}
@@ -290,8 +286,7 @@ export default function QuizSection() {
                     )}
                 </div>
 
-                {/* Фото справа */}
-                <div className="relative w-[30%] h-full hidden md:block">
+                                <div className="relative w-[30%] h-full hidden md:block">
                     <Image src="/fb1.png" alt="quiz side" fill className="object-cover" />
                 </div>
             </section>

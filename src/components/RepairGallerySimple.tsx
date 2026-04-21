@@ -15,8 +15,7 @@ const RepairGallerySimple: React.FC = () => {
     return (
         <section className="w-full bg-white py-6">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8">
-                {/* Галерея */}
-                <div className="hidden md:flex justify-center gap-4 lg:gap-4 overflow-hidden">
+                                <div className="hidden md:flex justify-center gap-4 lg:gap-4 overflow-hidden">
                     {media.map((item, i) => (
                         <div
                             key={i}
@@ -43,8 +42,7 @@ const RepairGallerySimple: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Мобильная версия */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-4 mt-10">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-4 mt-10">
                     {media.map((item, i) => (
                         <div
                             key={i}

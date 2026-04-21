@@ -6,7 +6,7 @@ const AboutFirm: React.FC = () => {
     return (
         <section className="w-full bg-white py-5 px-4 md:px-8">
             <div className="max-w-[1600px] mx-auto">
-                {/* Верхний текстовый блок */}
+                {}
                 <div className="mb-20">
                     <h2 className="text-4xl md:text-5xl font-light leading-snug text-gray-900 max-w-[1000px]">
                         <span className="text-brand font-normal">Гермес</span> — это архитектурное проектирование,
@@ -20,8 +20,8 @@ const AboutFirm: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Цифры (карточки) */}
-                {/* Карточки */}
+                {}
+                {}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div
                         className="bg-gray-50 rounded-3xl p-14 text-center md:text-left transition-all duration-300">

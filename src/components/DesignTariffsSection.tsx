@@ -40,8 +40,7 @@ export default function DesignTariffsSection() {
     return (
         <section className="mt-28 mb-28 flex justify-center px-4 md:px-8">
             <div className="w-full max-w-[1600px]">
-                {/* Заголовок */}
-                <div className="text-center mb-12">
+                                <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-medium text-brand mb-5">
                         Дизайн-проекты
                     </h2>
@@ -51,8 +50,7 @@ export default function DesignTariffsSection() {
                     </p>
                 </div>
 
-                {/* Карточки */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {designTariffs.map((item, idx) => (
                         <div
                             key={idx}

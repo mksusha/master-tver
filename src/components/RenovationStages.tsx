@@ -23,8 +23,7 @@ export default function RenovationStages() {
     return (
         <section className="mt-24 mb-32 w-full bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8">
-                {/* Заголовок */}
-                <div className="text-center mb-12">
+                                <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-medium text-[#B49C6C] mb-5">
                         Этапы ремонта под ключ
                     </h2>
@@ -34,8 +33,7 @@ export default function RenovationStages() {
                     </p>
                 </div>
 
-                {/* Сетка */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {stages.map((stage, i) => (
                         <div
                             key={i}

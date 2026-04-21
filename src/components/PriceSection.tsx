@@ -5,7 +5,7 @@ export default function PriceSection() {
         <section className="w-full   max-w-[1600px] mx-auto px-4 md:px-8 text-white  ">
             <div className=" bg-[#B49C6C] py-20 px-8 border rounded-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-                {/* Левая часть — текст */}
+                {}
                 <div className="space-y-6">
 
 
@@ -21,7 +21,7 @@ export default function PriceSection() {
                     </p>
                 </div>
 
-                {/* Правая часть — стоимость с рамкой */}
+                {}
                 <div className="flex flex-col justify-center items-center border-2 border-white/40 rounded-4xl py-12 px-8 md:ml-auto md:w-[80%]">
                     <p className="uppercase tracking-widest text-sm opacity-90 mb-3">
                         средняя стоимость в месяц

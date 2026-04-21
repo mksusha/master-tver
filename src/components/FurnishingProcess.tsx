@@ -28,8 +28,7 @@ export default function FurnishingSteps() {
         <section className="mt-20 mb-32 w-full bg-white">
             <div className="w-full max-w-[1600px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                {/* Левая колонка — заголовок и описание */}
-                <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
+                                <div className="md:sticky md:top-24 h-fit py-5 space-y-5 self-start">
                     <p className="uppercase text-2xl tracking-widest text-[#B49C6C]">
                         Этапы работы
                     </p>
@@ -44,8 +43,7 @@ export default function FurnishingSteps() {
                     </p>
                 </div>
 
-                {/* Правая колонка — карточки этапов */}
-                <div className="flex flex-col gap-6">
+                                <div className="flex flex-col gap-6">
                     {stages.map((stage, idx) => (
                         <div
                             key={idx}

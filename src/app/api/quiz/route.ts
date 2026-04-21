@@ -5,8 +5,7 @@ export async function POST(req: Request) {
     try {
         const { answers, phone, contactMethod } = await req.json();
 
-        // ⚙️ Настройка транспорта
-        const transporter = nodemailer.createTransport({
+                const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 465,
             secure: true,
@@ -16,8 +15,7 @@ export async function POST(req: Request) {
             },
         });
 
-        // Формируем письмо
-        const formattedAnswers = Object.entries(answers)
+                const formattedAnswers = Object.entries(answers)
             .map(([step, answer]) => `<p><strong>Вопрос ${+step + 1}:</strong> ${answer}</p>`)
             .join("");
 

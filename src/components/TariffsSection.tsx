@@ -9,7 +9,7 @@ export default function TariffsSection() {
     const repairTariffs = [
         {
             title: "Косметический ремонт",
-            price: "от 9 000 ₽/м²",
+            price: "от 15 000 ₽/м²",
             desc: "Обновление интерьера без перепланировки и сложных инженерных работ.",
             includes: [
                 "Удаление старых покрытий (обои, плинтусы, краска)",
@@ -23,7 +23,7 @@ export default function TariffsSection() {
         },
         {
             title: "Капитальный ремонт",
-            price: "от 15 000 ₽/м²",
+            price: "от 20 000 ₽/м²",
             desc: "Полный комплекс работ с заменой инженерных систем и отделки.",
             includes: [
                 "Полный демонтаж старой отделки",
@@ -80,8 +80,7 @@ export default function TariffsSection() {
     return (
         <section className="mt-28 mb-28 flex justify-center px-4 md:px-8">
             <div className="w-full max-w-[1600px]">
-                {/* Заголовок */}
-                <div className="text-center mb-12">
+                                <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-medium text-brand mb-5">
                         Тарифы
                     </h2>
@@ -90,8 +89,7 @@ export default function TariffsSection() {
                     </p>
                 </div>
 
-                {/* Переключатель */}
-                <div className="flex justify-center mb-10">
+                                <div className="flex justify-center mb-10">
                     <div className="flex bg-secondary rounded-full p-1">
                         <button
                             onClick={() => setActiveTab("repair")}
@@ -116,8 +114,7 @@ export default function TariffsSection() {
                     </div>
                 </div>
 
-                {/* Карточки */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {currentTariffs.map((item, idx) => (
                         <div
                             key={idx}

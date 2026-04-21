@@ -7,7 +7,7 @@ export default function MapSection() {
             className="mt-24 mb-24 flex justify-center px-4 md:px-8"
         >
             <div className="relative w-full max-w-[1600px] bg-secondary rounded-3xl shadow-sm overflow-hidden text-center">
-                {/* Заголовок и адрес */}
+                {}
                 <div className="py-6 md:py-8 border-b border-gray-100">
                     <h2 className="text-2xl md:text-3xl text-gray-900">
                         Мы на карте
@@ -22,7 +22,7 @@ export default function MapSection() {
                     </p>
                 </div>
 
-                {/* Карта */}
+                {}
                 <div className="relative w-full h-[400px] md:h-[500px]">
                     <iframe
                         src="https://yandex.ru/map-widget/v1/?ll=35.896193%2C56.839325&mode=search&oid=199673139492&ol=biz&sctx=ZAAAAAgBEAAaKAoSCUSKARJN8kFAESY5YFeTa0xAEhIJvajdrwJ8hz8RrTQpBd1ecj8iBgABAgMEBSgKOABAgqANSAFqAnJ1nQHNzMw9oAEAqAEAvQGxnKAuwgEGpKLJ6%2BcFggIf0LMg0YLQstC10YDRjCDRgdC6INCz0LXRgNC80LXRgYoCAJICAjE0mgIMZGVza3RvcC1tYXBzqgIHNjAwMjIzOA%3D%3D&sll=35.896193%2C56.839325&sspn=0.010335%2C0.004043&text=%D0%B3%20%D1%82%D0%B2%D0%B5%D1%80%D1%8C%20%D1%81%D0%BA%20%D0%B3%D0%B5%D1%80%D0%BC%D0%B5%D1%81&z=16.98"

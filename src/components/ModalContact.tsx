@@ -13,8 +13,7 @@ export default function ModalContact({ open, onClose }: ModalContactProps) {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    // Сброс формы при открытии модалки
-    useEffect(() => {
+        useEffect(() => {
         if (open) {
             setForm({ name: "", phone: "", message: "" });
             setSuccess(false);
